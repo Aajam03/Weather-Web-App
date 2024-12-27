@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(assets/bg2.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: screen;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container{
+    width: 400px;
+    height: min-content;
+    background-color: #ffffff1f;
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 1px 1px 17px -3px;
+    border: 1px solid #ffffffd6;
+}
+
+.search-box{
+    width: 100%;
+    height: min-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-box input{
+    width: 84%;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #000;
+    background-color: #ffffff1f;
+    padding: 12px 16px;
+    border-radius: 14px;
+}
+
+.search-box input::placeholder{
+    color: #6b6b6b;
+}
+
+.search-box button{
+    width: 46px;
+    height: 46px;
+    background-color: #ffffff1f;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.search-box button:hover{
+    color: #178aa5;
+    background-color: transparent;
+}
+
+.weather-body{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-block: 20px;
+    display: flex;
+}
+.weather-body img{
+    width: 60%;
+}
+
+.weather-box{
+    margin-block: 20px;
+    text-align: center;
+}
+
+.weather-box .temperature{
+    font-size: 40px;
+    font-weight: 800;
+    position: relative;
+}
+
+.temperature {
+    color: #4da0c5;
+    letter-spacing: .15em;
+    text-shadow: -1px -1px 1px #efede3, 
+    0px 1px 0 #0061aee3, 
+    0px 2px 0 #0061aee3, 
+    0px 3px 0 #0061aee3, 
+    0px 4px 0 #0061aee3, 
+    0px 5px 0 #0061aee3, 
+    0px 6px 0 #0061aee3, 
+    0px 7px 0 #0061aee3, 
+    2px 10px 5px rgba(0, 0, 0, 0.9), 
+    3px 11px 5px rgba(0, 0, 0, 0.3), 
+    6px 12px 8px rgba(0, 0, 0, 0.5), 
+    7px 13px 35px rgba(0, 0, 0, 0.9);
+}
+
+
+.weather-box .temperature sup{
+    font-size: 20px;
+    position: absolute;
+    font-weight: 600;
+}
+
+.weather-box .description {
+    font-size: 27px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #8d9ef8;
+    letter-spacing: .15em;
+    text-shadow: 0px -0.8px 0.5px #efede3, 
+    0px 0px 0 #3858ff, 
+    0px 2px 0 #3858ff, 
+    0px 3px 0 #3858ff, 
+    0px 4px 0 #3858ff, 
+    1px 5px 1.5px rgba(0, 0, 0, 1), 
+    -1px 5px 3px rgba(0, 0, 0, 1), 
+    0px 1px 0px rgba(0, 0, 0, 1), 
+    0px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.weather-details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+
+}
+
+.humidity, .wind{
+    display: flex;
+    align-items: center;
+}
+
+.humidity{
+    margin-left: 20px;
+}
+
+.wind{
+    margin-right: 20px;
+}
+
+.weather-details i{
+    font-size: 36px;
+    color: #453d86;
+}
+
+.weather-details .text{
+    margin-left: 10px;
+    font-size: 16px;
+    color: #2161a2;
+}
+
+.text span{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.location-not-found{
+    margin-top: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.location-not-found h1{
+    font-size: 20px;
+    color: #6b6b6b;
+    margin-block-end: 15px;
+}
+
+.location-not-found img{
+    width: 80%;
+}
+
+.weather-details p{
+    color: #000;
+    font-weight: 600;
+    background-image: linear-gradient(45deg, #03A9F4, purple);
+    color: transparent;
+    background-clip: text;
+}
+
+
+
+@media (max-width:400px) {
+
+    .container {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0%;
+    }
+
+    .weather-body{
+        display: flex;
+        height: 80vh;
+        margin: 0px;
+    }
+
+    .wind, .humidity {
+        margin: 0px;
+    }
+
+    .weather-body img {
+        margin-bottom: 0rem;
+    }
+
+    .weather-box {
+        margin-block: 30px;
+    }
+
+    .weather-details{
+        margin-top: 3.5rem;
+    }
+
+    .weather-box .temperature{
+        font-size: 50px;
+        margin-bottom: 1rem;
+    }
+    
+}
